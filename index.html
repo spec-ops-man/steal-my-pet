@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Steal My Pet — Prototype</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- p5.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.min.js"></script>
+</head>
+<body>
+  <div id="ui">
+    <div id="topbar">
+      <div id="title">Steal My Pet — Prototype</div>
+      <div id="controls">
+        <button id="btnHatch">Hatch (20 coins)</button>
+        <button id="btnTrapBan">Buy Banana (15)</button>
+        <button id="btnTrapTramp">Buy Trampoline (25)</button>
+        <button id="btnTrapFoam">Buy Foam Cannon (20)</button>
+        <button id="btnUpgrade">Upgrade Hideout (100)</button>
+        <span id="coins">Coins: 50</span>
+      </div>
+    </div>
+
+    <div id="panels">
+      <div class="panel" id="inventory">
+        <h3>Inventory</h3>
+        <div id="invList">
+          <div>Pets: <span id="petCount">0</span></div>
+          <div>Mythic: <span id="mythicCount">0</span></div>
+        </div>
+      </div>
+
+      <div class="panel" id="leaderboards">
+        <h3>Leaderboards (session)</h3>
+        <div id="lbMostMythic">Most Mythic Pets: you 0</div>
+        <div id="lbTopThieves">Top Thieves: AI Thief 0</div>
+        <div id="lbBestBase">Most Defended Base: you 0</div>
+      </div>
+
+      <div class="panel" id="tips">
+        <h3>Tips</h3>
+        <ul>
+          <li>Hatch pets to collect them; rarer pets cost same but are rarer.</li>
+          <li>Place traps near the base center to slow thieves.</li>
+          <li>When a pet is stolen it screams — try to chase the thief!</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- p5 sketch -->
+  <script src="sketch.js"></script>
+</body>
+</html>
