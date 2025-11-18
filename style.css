@@ -1,5 +1,5 @@
 * { box-sizing: border-box; font-family: "Segoe UI", Roboto, Arial, sans-serif; }
-html,body { margin:0; height:100%; }
+html,body { margin:0; height:100%; background: #8fc4a8; }
 #ui {
   position: absolute;
   left: 0; right: 0;
@@ -16,7 +16,7 @@ html,body { margin:0; height:100%; }
   padding: 8px 12px;
 }
 #title { font-weight:700; font-size:18px; letter-spacing:0.6px; }
-#controls { display:flex; gap:8px; align-items:center; }
+#controls { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
 #controls button {
   background:#fff; color:#0b2f2f; border:0; padding:6px 10px; border-radius:6px;
   cursor:pointer; font-weight:600;
@@ -32,3 +32,10 @@ html,body { margin:0; height:100%; }
 .panel h3 { margin:0 0 8px 0; font-size:15px; }
 #tips ul { padding-left:18px; margin:0; font-size:13px; }
 canvas { display:block; } /* p5 canvas fills page */
+
+/* responsivity */
+@media (max-width: 900px) {
+  #controls { overflow:auto; padding-bottom:6px; }
+  #panels { display:none; }
+}
+
